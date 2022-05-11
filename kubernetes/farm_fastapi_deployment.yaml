@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: backend-farm
+ labels:
+   app: backend-farm
+spec:
+ replicas: 1
+ selector:
+   matchLabels:
+     app: backend-farm
+ template:
+   metadata:
+     labels:
+       app: backend-farm
+   spec:
+     containers:
+     - name: fastapibackend-farm
+       image: farm_fastapi:latest
+       imagePullPolicy: Never
+       ports:
+       - containerPort: 8000

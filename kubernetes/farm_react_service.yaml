@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: my-react-service
+spec:
+  type: NodePort
+  selector:
+    app: my-react-app
+  ports:
+    - port: 3000
+      targetPort: 3000
+      nodePort: 31000

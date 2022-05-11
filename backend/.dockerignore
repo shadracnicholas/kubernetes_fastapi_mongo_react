@@ -1,0 +1,4 @@
+farm_deployment.yaml
+farm_fastapi_service.yaml
+__pycache__
+Dockerfile
